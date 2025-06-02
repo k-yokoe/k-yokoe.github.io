@@ -68,6 +68,28 @@
             background-color: #3498db;
             color: #fff;
         }
+        .header-content { /* ヘッダー内容を横並びにするコンテナ */
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .profile-photo { /* プロフィール写真のスタイル */
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .profile-info { /* プロフィール情報のスタイル */
+            flex: 1;
+            text-align: left;
+        }
         .main-photo-container { /* Container for the main photo */
             text-align: center;
             margin-bottom: 40px;
@@ -78,25 +100,13 @@
             border-radius: 8px; /* Slightly rounded corners for the photo */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        section {
-            margin-bottom: 50px;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #2c3e50;
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 10px;
+        .research-images { /* 研究画像を横並びにするコンテナ */
+            display: flex;
+            gap: 30px;
             margin-bottom: 25px;
-            font-weight: normal;
-        }
-        .research-area {
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-left: 4px solid #3498db;
-            margin-bottom: 30px;
         }
         .research-item { /* Container for each research topic including image */
-            margin-bottom: 25px;
+            flex: 1;
         }
         .research-item img {
             max-width: 100%; /* Make research images responsive */
@@ -104,6 +114,12 @@
             border-radius: 4px;
             margin-bottom: 15px; /* Space between image and text */
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .research-area {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
         }
         .research-area p {
             margin-bottom: 15px;
@@ -228,6 +244,17 @@
                 margin-bottom: 20px;
             }
         }
+        section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
@@ -236,29 +263,34 @@
             <div class="language-switch">
                 <a href="index_en.html">English</a>
             </div>
-            <h1 class="name">横江 健太</h1>
-            <div class="name-en">Kenta Yokoe</div>
-            <div class="title-degree">博士（工学）</div>
-            <div class="affiliation">名古屋大学 大学院工学研究科 機械システム工学専攻</div>
-            <div class="affiliation">サイバーロボティクス研究グループ</div>
-            <div class="affiliation">日本学術振興会 特別研究員 (PD)</div>
+            <div class="header-content">
+                <div class="profile-photo">
+                    <img src="face.jpg" alt="横江健太のプロフィール写真">
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">横江 健太</h1>
+                    <div class="name-en">Kenta Yokoe</div>
+                    <div class="title-degree">博士（工学）</div>
+                    <div class="affiliation">名古屋大学 大学院工学研究科 機械システム工学専攻</div>
+                    <div class="affiliation">サイバーロボティクス研究グループ</div>
+                    <div class="affiliation">日本学術振興会 特別研究員 (PD)</div>
+                </div>
+            </div>
         </header>
-
-        <div class="main-photo-container">
-            <img src="face.jpg" alt="横江健太のプロフィール写真" class="main-photo">
-        </div>
 
         <section>
             <h2>研究分野</h2>
             <div class="research-area">
-                <div class="research-item">
-                    <img src="immersive.png" alt="没入型微細操作システムの研究画像">
-                    <p>仮想現実・複合現実技術を基盤として，初学者でも容易に微細操作が行えるシステムを研究しています．</p>
+                <div class="research-images">
+                    <div class="research-item">
+                        <img src="immersive.png" alt="没入型微細操作システムの研究画像">
+                    </div>
+                    <div class="research-item">
+                        <img src="tactile.png" alt="触覚提示システムの研究画像">
+                    </div>
                 </div>
-                <div class="research-item">
-                    <img src="tactile.png" alt="触覚提示システムの研究画像">
-                    <p>McKibben人工筋と衣服で構成された着衣型デバイスを用いて，没入型環境下における触覚提示手法に関する研究をしています．</p>
-                </div>
+                <p>仮想現実・複合現実技術を基盤として，初学者でも容易に微細操作が行えるシステムを研究しています．</p>
+                <p>McKibben人工筋と衣服で構成された着衣型デバイスを用いて，没入型環境下における触覚提示手法に関する研究をしています．</p>
             </div>
         </section>
 
