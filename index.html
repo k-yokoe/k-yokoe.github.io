@@ -376,12 +376,12 @@
             // モバイル版でのナビゲーション初期設定
             function initMobileNav() {
                 if (isMobile()) {
-                    sectionNav.classList.add('nav-mobile');
+                    // モバイル版では特別な設定は不要（CSSで制御）
                     isNavVisible = false;
                     sectionNav.classList.remove('nav-visible');
                     mobileMenuButton.classList.remove('active');
                 } else {
-                    sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                    sectionNav.classList.remove('nav-visible');
                     mobileMenuButton.classList.remove('active');
                     isNavVisible = false;
                 }

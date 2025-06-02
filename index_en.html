@@ -17,8 +17,8 @@
             <div class="nav-container">
                 <a href="#biography" class="nav-item">Biography</a>
                 <a href="#research" class="nav-item">Research</a>
-                <a href="#publications" class="nav-item">Publications</a>
-                <a href="#conferences" class="nav-item">Int'l Conference</a>
+                <a href="#publications" class="nav-item">Journal</a>
+                <a href="#conferences" class="nav-item">International Conference</a>
                 <a href="#domestic-conferences" class="nav-item">Domestic Conference</a>
                 <a href="#awards" class="nav-item">Awards</a>
                 <a href="#grants" class="nav-item">Grants</a>
@@ -380,12 +380,12 @@
             // Initialize mobile navigation
             function initMobileNav() {
                 if (isMobile()) {
-                    sectionNav.classList.add('nav-mobile');
+                    // Mobile version doesn't need special classes (controlled by CSS)
                     isNavVisible = false;
                     sectionNav.classList.remove('nav-visible');
                     mobileMenuButton.classList.remove('active');
                 } else {
-                    sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                    sectionNav.classList.remove('nav-visible');
                     mobileMenuButton.classList.remove('active');
                     isNavVisible = false;
                 }
