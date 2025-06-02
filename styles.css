@@ -658,7 +658,7 @@ html {
 }
 
 .nav-mobile::after {
-    content: "タップしてメニューを表示";
+    content: "クリックしてメニューを表示";
     position: absolute;
     bottom: -40px;
     left: 50%;
@@ -679,5 +679,5 @@ html {
 
 /* 英語版用のメッセージ */
 html[lang="en"] .nav-mobile::after {
-    content: "Tap to show menu";
+    content: "Click to show menu";
 } 
