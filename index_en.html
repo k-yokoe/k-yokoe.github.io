@@ -348,6 +348,7 @@
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item');
             const sectionNav = document.querySelector('.section-nav');
+            const navContainer = document.querySelector('.nav-container');
             let isNavVisible = false;
 
             // Mobile detection
@@ -360,6 +361,7 @@
                 if (isMobile()) {
                     isNavVisible = !isNavVisible;
                     sectionNav.classList.toggle('nav-visible', isNavVisible);
+                    console.log('Nav toggled:', isNavVisible); // Debug
                 }
             }
 
@@ -372,6 +374,7 @@
                     }
                 } else {
                     sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                    isNavVisible = false;
                 }
             }
 
@@ -398,9 +401,20 @@
             window.addEventListener('scroll', highlightCurrentSection);
             window.addEventListener('resize', initMobileNav);
             
-            // Mobile navigation tap to show
+            // Mobile navigation click/tap to show
             sectionNav.addEventListener('click', function(e) {
-                if (isMobile() && e.target === sectionNav) {
+                if (isMobile() && !navContainer.contains(e.target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleNavVisibility();
+                }
+            });
+
+            // Touch events
+            sectionNav.addEventListener('touchend', function(e) {
+                if (isMobile() && !navContainer.contains(e.target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     toggleNavVisibility();
                 }
             });

@@ -344,6 +344,7 @@
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item');
             const sectionNav = document.querySelector('.section-nav');
+            const navContainer = document.querySelector('.nav-container');
             let isNavVisible = false;
 
             // モバイル判定
@@ -356,6 +357,7 @@
                 if (isMobile()) {
                     isNavVisible = !isNavVisible;
                     sectionNav.classList.toggle('nav-visible', isNavVisible);
+                    console.log('Nav toggled:', isNavVisible); // デバッグ用
                 }
             }
 
@@ -368,6 +370,7 @@
                     }
                 } else {
                     sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                    isNavVisible = false;
                 }
             }
 
@@ -394,9 +397,20 @@
             window.addEventListener('scroll', highlightCurrentSection);
             window.addEventListener('resize', initMobileNav);
             
-            // モバイル版でナビゲーションバーをタップで表示
+            // モバイル版でナビゲーションバーをクリック/タップで表示
             sectionNav.addEventListener('click', function(e) {
-                if (isMobile() && e.target === sectionNav) {
+                if (isMobile() && !navContainer.contains(e.target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleNavVisibility();
+                }
+            });
+
+            // タッチイベントも追加
+            sectionNav.addEventListener('touchend', function(e) {
+                if (isMobile() && !navContainer.contains(e.target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     toggleNavVisibility();
                 }
             });
