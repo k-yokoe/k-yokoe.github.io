@@ -483,28 +483,32 @@ footer {
 
     .nav-container {
         padding: 0 10px;
-        flex-direction: column;
+        flex-direction: row;
         gap: 5px;
         align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .nav-items {
         justify-content: center;
         flex-wrap: wrap;
-        gap: 3px;
-        order: 2;
+        gap: 2px;
+        flex: 1;
+        order: 1;
     }
 
     .nav-item {
-        font-size: 0.8em;
-        padding: 10px 12px;
+        font-size: 0.75em;
+        padding: 8px 10px;
     }
 
     .language-nav {
         margin-left: 0 !important;
         margin-top: 0;
-        order: 1;
-        margin-bottom: 5px;
+        order: 2;
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .header-content {
