@@ -399,29 +399,39 @@
 
             // Event listeners
             window.addEventListener('scroll', highlightCurrentSection);
-            window.addEventListener('resize', initMobileNav);
+            window.addEventListener('resize', function() {
+                initMobileNav();
+                highlightCurrentSection();
+            });
             
             // Mobile navigation click/tap to show
             sectionNav.addEventListener('click', function(e) {
-                if (isMobile() && !navContainer.contains(e.target)) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleNavVisibility();
+                if (isMobile()) {
+                    // Click outside navigation items
+                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleNavVisibility();
+                        console.log('Navigation clicked, target:', e.target);
+                    }
                 }
             });
 
-            // Touch events
-            sectionNav.addEventListener('touchend', function(e) {
-                if (isMobile() && !navContainer.contains(e.target)) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleNavVisibility();
+            // Touch events for mobile devices
+            sectionNav.addEventListener('touchstart', function(e) {
+                if (isMobile()) {
+                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleNavVisibility();
+                        console.log('Navigation touched, target:', e.target);
+                    }
                 }
-            });
+            }, { passive: false });
 
             // Navigation item click handling
             navItems.forEach(item => {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function(e) {
                     if (isMobile()) {
                         setTimeout(() => {
                             isNavVisible = false;

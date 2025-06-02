@@ -395,29 +395,39 @@
 
             // イベントリスナー
             window.addEventListener('scroll', highlightCurrentSection);
-            window.addEventListener('resize', initMobileNav);
+            window.addEventListener('resize', function() {
+                initMobileNav();
+                highlightCurrentSection();
+            });
             
-            // モバイル版でナビゲーションバーをクリック/タップで表示
+            // モバイル版でナビゲーションエリア全体をクリック/タップで表示
             sectionNav.addEventListener('click', function(e) {
-                if (isMobile() && !navContainer.contains(e.target)) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleNavVisibility();
+                if (isMobile()) {
+                    // ナビゲーションアイテム以外をクリックした場合
+                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleNavVisibility();
+                        console.log('Navigation clicked, target:', e.target);
+                    }
                 }
             });
 
-            // タッチイベントも追加
-            sectionNav.addEventListener('touchend', function(e) {
-                if (isMobile() && !navContainer.contains(e.target)) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    toggleNavVisibility();
+            // タッチイベントも追加（モバイルデバイス専用）
+            sectionNav.addEventListener('touchstart', function(e) {
+                if (isMobile()) {
+                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleNavVisibility();
+                        console.log('Navigation touched, target:', e.target);
+                    }
                 }
-            });
+            }, { passive: false });
 
             // ナビゲーションアイテムクリック時の処理
             navItems.forEach(item => {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function(e) {
                     if (isMobile()) {
                         setTimeout(() => {
                             isNavVisible = false;

@@ -465,14 +465,14 @@ footer {
 
 @media (max-width: 768px) {
     .container {
-        padding: 15px 10px;
+        padding: 10px 5px;
     }
 
     .header-content {
         flex-direction: column;
         text-align: center;
-        padding: 25px 15px;
-        gap: 25px;
+        padding: 20px 10px;
+        gap: 20px;
     }
 
     .profile-photo {
@@ -481,25 +481,31 @@ footer {
     }
 
     .name {
-        font-size: 2em;
+        font-size: 1.9em;
     }
 
     .language-switch {
         position: static;
         text-align: center;
-        margin-bottom: 15px;
-        padding: 0 10px;
+        margin-bottom: 10px;
+        padding: 0 5px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .language-switch a {
-        padding: 10px 20px;
-        font-size: 0.85em;
+        padding: 12px 24px;
+        font-size: 0.9em;
         display: inline-block;
-        min-width: 80px;
+        min-width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 25px;
     }
 
     section {
-        padding: 25px 15px;
+        padding: 20px 10px;
+        margin-bottom: 20px;
     }
 
     .research-container {
@@ -516,11 +522,13 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
         gap: 8px;
+        margin-top: 15px;
     }
 
     .external-links-info a {
-        font-size: 0.8em;
+        font-size: 0.75em;
         padding: 8px 12px;
+        margin: 2px;
     }
 
     .publication-number, .award-number {
@@ -542,13 +550,14 @@ footer {
 
     /* ナビゲーションバーのモバイル対応 */
     .nav-container {
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        padding: 10px 15px;
+        padding: 8px 10px;
         gap: 2px;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        flex-wrap: wrap;
     }
 
     .nav-container::-webkit-scrollbar {
@@ -556,21 +565,42 @@ footer {
     }
 
     .nav-item {
-        padding: 12px 16px;
-        font-size: 0.8em;
+        padding: 10px 14px;
+        font-size: 0.75em;
         flex-shrink: 0;
+        margin: 2px;
     }
 
     /* モバイル版ナビゲーションの位置調整 */
     .section-nav {
         position: relative;
         cursor: pointer;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* ヘッダーとの間隔調整 */
     header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* プロフィール情報の調整 */
+    .profile-info {
+        padding: 0 10px;
+    }
+
+    .affiliation {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .name-en {
+        font-size: 1.1em;
     }
 }
 
@@ -669,26 +699,46 @@ html {
 
 /* モバイル版ナビゲーション */
 .nav-mobile {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     transition: transform 0.3s ease;
     margin-bottom: 0;
+    opacity: 0.3;
 }
 
 .nav-mobile.nav-visible {
     transform: translateY(0);
+    opacity: 1;
+}
+
+.nav-mobile::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    opacity: 0.7;
+    z-index: 999;
+}
+
+.nav-mobile.nav-visible::before {
+    display: none;
 }
 
 .nav-mobile::after {
     content: "クリックしてメニューを表示";
     position: absolute;
-    bottom: -35px;
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--primary-color);
     color: white;
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 0.7em;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.75em;
     white-space: nowrap;
     opacity: 0.9;
     pointer-events: none;
