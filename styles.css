@@ -335,16 +335,15 @@ h3 {
 /* Awards */
 .award {
     background-color: var(--bg-color);
-    border-left: 4px solid var(--accent-color);
     padding: 15px 20px;
     margin-bottom: 15px;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .award:hover {
     box-shadow: var(--shadow);
-    transform: translateX(5px);
+    transform: translateY(-2px);
 }
 
 .award-name {
