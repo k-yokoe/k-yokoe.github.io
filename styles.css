@@ -546,6 +546,12 @@ footer {
         font-size: 0.8em;
         flex-shrink: 0;
     }
+
+    /* モバイル版ナビゲーションの位置調整 */
+    .section-nav {
+        position: relative;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 480px) {
@@ -639,4 +645,39 @@ html {
 .nav-item.active {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* モバイル版ナビゲーション */
+.nav-mobile {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-mobile.nav-visible {
+    transform: translateY(0);
+}
+
+.nav-mobile::after {
+    content: "タップしてメニューを表示";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.nav-mobile.nav-visible::after {
+    display: none;
+}
+
+/* 英語版用のメッセージ */
+html[lang="en"] .nav-mobile::after {
+    content: "Tap to show menu";
 } 

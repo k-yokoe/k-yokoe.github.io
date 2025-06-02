@@ -338,6 +338,85 @@
     <script>
         // フッターの年を動的に設定
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // セクションナビゲーション機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-item');
+            const sectionNav = document.querySelector('.section-nav');
+            let isNavVisible = false;
+
+            // モバイル判定
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+
+            // ナビゲーションの表示/非表示切り替え
+            function toggleNavVisibility() {
+                if (isMobile()) {
+                    isNavVisible = !isNavVisible;
+                    sectionNav.classList.toggle('nav-visible', isNavVisible);
+                }
+            }
+
+            // モバイル版でのナビゲーション初期設定
+            function initMobileNav() {
+                if (isMobile()) {
+                    sectionNav.classList.add('nav-mobile');
+                    if (!isNavVisible) {
+                        sectionNav.classList.remove('nav-visible');
+                    }
+                } else {
+                    sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                }
+            }
+
+            // 現在のセクションをハイライト
+            function highlightCurrentSection() {
+                const scrollPosition = window.scrollY + 100;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navItems.forEach(item => item.classList.remove('active'));
+                        const activeNav = document.querySelector(`a[href="#${sectionId}"]`);
+                        if (activeNav) {
+                            activeNav.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            // イベントリスナー
+            window.addEventListener('scroll', highlightCurrentSection);
+            window.addEventListener('resize', initMobileNav);
+            
+            // モバイル版でナビゲーションバーをタップで表示
+            sectionNav.addEventListener('click', function(e) {
+                if (isMobile() && e.target === sectionNav) {
+                    toggleNavVisibility();
+                }
+            });
+
+            // ナビゲーションアイテムクリック時の処理
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (isMobile()) {
+                        setTimeout(() => {
+                            isNavVisible = false;
+                            sectionNav.classList.remove('nav-visible');
+                        }, 300);
+                    }
+                });
+            });
+
+            // 初期化
+            initMobileNav();
+            highlightCurrentSection();
+        });
     </script>
 </body>
 </html>

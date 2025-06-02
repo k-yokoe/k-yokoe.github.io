@@ -342,6 +342,85 @@
     <script>
         // Set the current year in the footer dynamically
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Section navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-item');
+            const sectionNav = document.querySelector('.section-nav');
+            let isNavVisible = false;
+
+            // Mobile detection
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+
+            // Toggle navigation visibility
+            function toggleNavVisibility() {
+                if (isMobile()) {
+                    isNavVisible = !isNavVisible;
+                    sectionNav.classList.toggle('nav-visible', isNavVisible);
+                }
+            }
+
+            // Initialize mobile navigation
+            function initMobileNav() {
+                if (isMobile()) {
+                    sectionNav.classList.add('nav-mobile');
+                    if (!isNavVisible) {
+                        sectionNav.classList.remove('nav-visible');
+                    }
+                } else {
+                    sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                }
+            }
+
+            // Highlight current section
+            function highlightCurrentSection() {
+                const scrollPosition = window.scrollY + 100;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navItems.forEach(item => item.classList.remove('active'));
+                        const activeNav = document.querySelector(`a[href="#${sectionId}"]`);
+                        if (activeNav) {
+                            activeNav.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            // Event listeners
+            window.addEventListener('scroll', highlightCurrentSection);
+            window.addEventListener('resize', initMobileNav);
+            
+            // Mobile navigation tap to show
+            sectionNav.addEventListener('click', function(e) {
+                if (isMobile() && e.target === sectionNav) {
+                    toggleNavVisibility();
+                }
+            });
+
+            // Navigation item click handling
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (isMobile()) {
+                        setTimeout(() => {
+                            isNavVisible = false;
+                            sectionNav.classList.remove('nav-visible');
+                        }, 300);
+                    }
+                });
+            });
+
+            // Initialize
+            initMobileNav();
+            highlightCurrentSection();
+        });
     </script>
 </body>
 </html> 
