@@ -493,26 +493,6 @@ footer {
         font-size: 1.9em;
     }
 
-    .language-switch {
-        position: static;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        padding: 0 5px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .language-switch a {
-        padding: 12px 24px;
-        font-size: 0.9em;
-        display: inline-block;
-        min-width: 100px;
-        margin: 0 auto;
-        text-align: center;
-        border-radius: 25px;
-    }
-
     section {
         padding: 20px 10px;
         margin-bottom: 20px;
@@ -644,9 +624,18 @@ html {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-items {
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
+    flex: 1;
 }
 
 .nav-item {
@@ -669,5 +658,20 @@ html {
 .nav-item.active {
     background-color: var(--primary-color);
     color: white;
+}
+
+.language-nav {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 8px 16px !important;
+    margin-left: 20px;
+}
+
+.language-nav:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
