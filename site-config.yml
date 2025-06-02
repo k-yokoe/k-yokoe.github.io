@@ -62,6 +62,43 @@ research_areas:
       en: "I am conducting research on haptic presentation methods in immersive environments using wearable devices composed of McKibben artificial muscles and clothing."
     image: "tactile.png"
 
+# 研究資金
+research_grants:
+  - period:
+      ja: "2024年4月 - 2026年3月"
+      en: "April 2024 - March 2026"
+    title:
+      ja: "着衣型空圧駆動触覚デバイスを用いたヒトの動作を伝達する遠隔指導システム"
+      en: "Remote Instruction System for Transmitting Human Motion Using Wearable Pneumatic Haptic Devices"
+    source:
+      ja: "公益財団法人 油空圧機器技術振興財団 研究助成金"
+      en: "Research Grant from the Fluid Power Technology Promotion Foundation"
+    role:
+      ja: "（代表）"
+      en: "(Principal Investigator)"
+      
+  - period:
+      ja: "2023年4月 - 2025年3月"
+      en: "April 2023 - March 2025"
+    title:
+      ja: "身体への面状力触覚提示を伴う没入型微細操作システム"
+      en: "Immersive Micromanipulation System with Surface Force Haptic Presentation to the Body"
+    source:
+      ja: "日本学術振興会 科学研究費助成事業 特別研究員奨励費"
+      en: "JSPS KAKENHI Grant-in-Aid for JSPS Fellows"
+    role:
+      ja: "（代表）"
+      en: "(Principal Investigator)"
+
+# 所属学会
+professional_memberships:
+  - name: "IEEE (Institute of Electrical and Electronics Engineers)"
+  - name: "IEEE Robotics and Automation Society"
+  - name:
+      ja: "一般社団法人 日本機械学会"
+      en: "The Japan Society of Mechanical Engineers (JSME)"
+  - name: "ACM SIGCHI (Association for Computing Machinery - Computer-Human Interaction)"
+
 # メタデータ
 metadata:
   keywords:
@@ -69,4 +106,12 @@ metadata:
     en: "Kenta Yokoe, Nagoya University, immersive, micromanipulation, haptics, robotics, VR, MR"
   description:
     ja: "横江健太の研究者個人ページ。没入型微細操作システムと着衣型デバイスを用いた触覚提示の研究を行っています。"
-    en: "Personal research page of Kenta Yokoe. Research on immersive micromanipulation systems and haptic presentation using wearable devices." 
+    en: "Personal research page of Kenta Yokoe. Research on immersive micromanipulation systems and haptic presentation using wearable devices."
+
+# デザイン設定
+design:
+  profile_image:
+    object_position: "center top"  # 頭部が見切れないように調整
+  layout:
+    external_links_position: "header"  # 外部リンクをヘッダーに配置
+    research_layout: "side_by_side"    # 研究内容を横並び表示 

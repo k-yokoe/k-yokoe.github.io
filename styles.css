@@ -52,6 +52,7 @@ header {
     margin-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
 }
 
 .header-content {
@@ -71,6 +72,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -88,8 +90,8 @@ header {
     font-size: 3em;
     font-weight: 300;
     letter-spacing: 0.05em;
-    margin-bottom: 5px;
     color: var(--primary-color);
+    margin-bottom: 5px;
 }
 
 .name-en {
@@ -108,6 +110,31 @@ header {
     font-size: 1em;
     color: var(--secondary-color);
     margin-bottom: 5px;
+}
+
+.external-links-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.external-links-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.external-links-info a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 .language-switch {
@@ -357,19 +384,48 @@ h3 {
     font-size: 0.95em;
 }
 
+.funding .role {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Academic Societies */
+.societies-list {
+    list-style: none;
+}
+
+.societies-list li {
+    padding: 10px 0;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.societies-list li:last-child {
+    border-bottom: none;
+}
+
+.societies-list li:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    margin: 0 -20px;
+    padding: 10px 20px;
+}
+
 /* Contact & Links */
-.contact-info p, .external-links p {
+.contact-info p {
     margin-bottom: 10px;
     color: var(--secondary-color);
 }
 
-.contact-info a, .external-links a {
+.contact-info a {
     color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.contact-info a:hover, .external-links a:hover {
+.contact-info a:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
@@ -401,6 +457,10 @@ footer {
 
     .research-container {
         gap: 30px;
+    }
+
+    .external-links-info {
+        justify-content: flex-start;
     }
 }
 
@@ -456,6 +516,11 @@ footer {
         margin: 0;
         padding: 15px 0;
     }
+
+    .external-links-info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 480px) {
@@ -473,6 +538,16 @@ footer {
 
     .research-section {
         padding: 20px;
+    }
+
+    .external-links-info a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
 }
 
