@@ -525,6 +525,27 @@ footer {
         font-weight: 600;
         flex-shrink: 0;
     }
+
+    /* ナビゲーションバーのモバイル対応 */
+    .nav-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 15px;
+        gap: 2px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .nav-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 12px 16px;
+        font-size: 0.8em;
+        flex-shrink: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -570,4 +591,52 @@ footer {
     .profile-photo img {
         filter: none;
     }
+}
+
+/* 全体的なスムーズスクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Navigation */
+.section-nav {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav-item {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
 } 
