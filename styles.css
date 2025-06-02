@@ -472,9 +472,32 @@ footer {
         padding: 10px 5px;
     }
 
-    /* モバイル版ではナビゲーションバーを非表示 */
+    /* モバイル版でもナビゲーションバーを表示するが、stickyにしない */
     .section-nav {
-        display: none;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-items {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .nav-item {
+        font-size: 0.8em;
+        padding: 10px 12px;
+    }
+
+    .language-nav {
+        margin-left: 0;
+        margin-top: 10px;
     }
 
     .header-content {
