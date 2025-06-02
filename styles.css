@@ -474,20 +474,25 @@ footer {
 
     /* モバイル版でもナビゲーションバーを表示するが、stickyにしない */
     .section-nav {
-        position: static;
+        position: static !important;
         margin-bottom: 20px;
+        box-shadow: none;
+        top: auto;
+        z-index: auto;
     }
 
     .nav-container {
         padding: 0 10px;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
+        align-items: center;
     }
 
     .nav-items {
         justify-content: center;
         flex-wrap: wrap;
         gap: 3px;
+        order: 2;
     }
 
     .nav-item {
@@ -496,8 +501,10 @@ footer {
     }
 
     .language-nav {
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 0 !important;
+        margin-top: 0;
+        order: 1;
+        margin-bottom: 5px;
     }
 
     .header-content {
