@@ -9,6 +9,11 @@
 <body>
     <div class="container">
         <nav class="section-nav">
+            <button class="mobile-menu-button" aria-label="メニューを開く">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <div class="nav-container">
                 <a href="#biography" class="nav-item">学歴・職歴</a>
                 <a href="#research" class="nav-item">研究内容</a>
@@ -344,7 +349,7 @@
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item');
             const sectionNav = document.querySelector('.section-nav');
-            const navContainer = document.querySelector('.nav-container');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
             let isNavVisible = false;
 
             // モバイル判定
@@ -357,7 +362,14 @@
                 if (isMobile()) {
                     isNavVisible = !isNavVisible;
                     sectionNav.classList.toggle('nav-visible', isNavVisible);
-                    console.log('Nav toggled:', isNavVisible); // デバッグ用
+                    mobileMenuButton.classList.toggle('active', isNavVisible);
+                    
+                    // ボタンのaria-labelを更新
+                    if (isNavVisible) {
+                        mobileMenuButton.setAttribute('aria-label', 'メニューを閉じる');
+                    } else {
+                        mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
+                    }
                 }
             }
 
@@ -365,11 +377,12 @@
             function initMobileNav() {
                 if (isMobile()) {
                     sectionNav.classList.add('nav-mobile');
-                    if (!isNavVisible) {
-                        sectionNav.classList.remove('nav-visible');
-                    }
+                    isNavVisible = false;
+                    sectionNav.classList.remove('nav-visible');
+                    mobileMenuButton.classList.remove('active');
                 } else {
                     sectionNav.classList.remove('nav-mobile', 'nav-visible');
+                    mobileMenuButton.classList.remove('active');
                     isNavVisible = false;
                 }
             }
@@ -400,38 +413,22 @@
                 highlightCurrentSection();
             });
             
-            // モバイル版でナビゲーションエリア全体をクリック/タップで表示
-            sectionNav.addEventListener('click', function(e) {
-                if (isMobile()) {
-                    // ナビゲーションアイテム以外をクリックした場合
-                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        toggleNavVisibility();
-                        console.log('Navigation clicked, target:', e.target);
-                    }
-                }
+            // メニューボタンクリック
+            mobileMenuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleNavVisibility();
             });
-
-            // タッチイベントも追加（モバイルデバイス専用）
-            sectionNav.addEventListener('touchstart', function(e) {
-                if (isMobile()) {
-                    if (!e.target.classList.contains('nav-item') && e.target !== navContainer) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        toggleNavVisibility();
-                        console.log('Navigation touched, target:', e.target);
-                    }
-                }
-            }, { passive: false });
 
             // ナビゲーションアイテムクリック時の処理
             navItems.forEach(item => {
                 item.addEventListener('click', function(e) {
-                    if (isMobile()) {
+                    if (isMobile() && isNavVisible) {
                         setTimeout(() => {
                             isNavVisible = false;
                             sectionNav.classList.remove('nav-visible');
+                            mobileMenuButton.classList.remove('active');
+                            mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
                         }, 300);
                     }
                 });
