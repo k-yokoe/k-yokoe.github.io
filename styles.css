@@ -138,9 +138,13 @@ header {
 }
 
 .language-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .language-switch a {
@@ -492,7 +496,8 @@ footer {
     .language-switch {
         position: static;
         text-align: center;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 15px;
         padding: 0 5px;
         width: 100%;
         box-sizing: border-box;
