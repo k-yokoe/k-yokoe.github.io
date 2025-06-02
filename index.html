@@ -9,11 +9,6 @@
 <body>
     <div class="container">
         <nav class="section-nav">
-            <button class="mobile-menu-button" aria-label="メニューを開く">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
             <div class="nav-container">
                 <a href="#biography" class="nav-item">学歴・職歴</a>
                 <a href="#research" class="nav-item">研究内容</a>
@@ -348,44 +343,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item');
-            const sectionNav = document.querySelector('.section-nav');
-            const mobileMenuButton = document.querySelector('.mobile-menu-button');
-            let isNavVisible = false;
-
-            // モバイル判定
-            function isMobile() {
-                return window.innerWidth <= 768;
-            }
-
-            // ナビゲーションの表示/非表示切り替え
-            function toggleNavVisibility() {
-                if (isMobile()) {
-                    isNavVisible = !isNavVisible;
-                    sectionNav.classList.toggle('nav-visible', isNavVisible);
-                    mobileMenuButton.classList.toggle('active', isNavVisible);
-                    
-                    // ボタンのaria-labelを更新
-                    if (isNavVisible) {
-                        mobileMenuButton.setAttribute('aria-label', 'メニューを閉じる');
-                    } else {
-                        mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
-                    }
-                }
-            }
-
-            // モバイル版でのナビゲーション初期設定
-            function initMobileNav() {
-                if (isMobile()) {
-                    // モバイル版では特別な設定は不要（CSSで制御）
-                    isNavVisible = false;
-                    sectionNav.classList.remove('nav-visible');
-                    mobileMenuButton.classList.remove('active');
-                } else {
-                    sectionNav.classList.remove('nav-visible');
-                    mobileMenuButton.classList.remove('active');
-                    isNavVisible = false;
-                }
-            }
 
             // 現在のセクションをハイライト
             function highlightCurrentSection() {
@@ -408,34 +365,9 @@
 
             // イベントリスナー
             window.addEventListener('scroll', highlightCurrentSection);
-            window.addEventListener('resize', function() {
-                initMobileNav();
-                highlightCurrentSection();
-            });
-            
-            // メニューボタンクリック
-            mobileMenuButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                toggleNavVisibility();
-            });
-
-            // ナビゲーションアイテムクリック時の処理
-            navItems.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    if (isMobile() && isNavVisible) {
-                        setTimeout(() => {
-                            isNavVisible = false;
-                            sectionNav.classList.remove('nav-visible');
-                            mobileMenuButton.classList.remove('active');
-                            mobileMenuButton.setAttribute('aria-label', 'メニューを開く');
-                        }, 300);
-                    }
-                });
-            });
+            window.addEventListener('resize', highlightCurrentSection);
 
             // 初期化
-            initMobileNav();
             highlightCurrentSection();
         });
     </script>
