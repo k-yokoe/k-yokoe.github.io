@@ -1,0 +1,72 @@
+# サイト設定ファイル
+site:
+  title:
+    ja: "横江 健太"
+    en: "Kenta Yokoe"
+  author:
+    name:
+      ja: "横江 健太"
+      en: "Kenta Yokoe"
+    name_kana: "ヨコエ ケンタ"
+    title:
+      ja: "博士（工学）"
+      en: "Doctor of Philosophy in Engineering"
+    current_position:
+      ja: "日本学術振興会 特別研究員 (PD)"
+      en: "JSPS Research Fellow (PD)"
+    affiliation:
+      university:
+        ja: "名古屋大学"
+        en: "Nagoya University"
+      department:
+        ja: "大学院工学研究科 機械システム工学専攻"
+        en: "Graduate School of Engineering, Department of Mechanical Systems Engineering"
+      group:
+        ja: "サイバーロボティクス研究グループ"
+        en: "Cyber Robotics Research Group"
+    
+  contact:
+    email: "yokoe[at]nagoya-u.jp"
+    address:
+      ja: "〒464-8603 愛知県名古屋市千種区不老町１"
+      en: "1 Furo-cho, Chikusa-ku, Nagoya 464-8603, Japan"
+    
+  external_links:
+    researchmap: "https://researchmap.jp/kenta_yokoe"
+    linkedin: "https://www.linkedin.com/in/kenta-yokoe"
+    group_website: "https://cyr.mae.nagoya-u.ac.jp/"
+
+# フォント設定
+fonts:
+  japanese: "'Noto Sans JP', sans-serif"
+  english: "'Roboto', sans-serif"
+  google_fonts_url: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+
+# 研究分野
+research_areas:
+  - id: "immersive_micromanipulation"
+    title:
+      ja: "没入型微細操作システム"
+      en: "Immersive Micromanipulation Systems"
+    description:
+      ja: "仮想現実・複合現実技術を基盤として，初学者でも容易に微細操作が行えるシステムを研究しています．"
+      en: "I am developing immersive micromanipulation systems based on virtual reality and mixed reality technologies that enable even beginners to perform precise micro-operations with ease."
+    image: "immersive.png"
+    
+  - id: "surface_haptic"
+    title:
+      ja: "着衣型デバイスを用いた面状触覚提示"
+      en: "Surface Haptic Presentation Using Wearable Devices"
+    description:
+      ja: "McKibben人工筋と衣服で構成された着衣型デバイスを用いて，没入型環境下における触覚提示手法に関する研究をしています．"
+      en: "I am conducting research on haptic presentation methods in immersive environments using wearable devices composed of McKibben artificial muscles and clothing."
+    image: "tactile.png"
+
+# メタデータ
+metadata:
+  keywords:
+    ja: "横江健太, 名古屋大学, 没入型, 微細操作, 触覚, ロボティクス, VR, MR"
+    en: "Kenta Yokoe, Nagoya University, immersive, micromanipulation, haptics, robotics, VR, MR"
+  description:
+    ja: "横江健太の研究者個人ページ。没入型微細操作システムと着衣型デバイスを用いた触覚提示の研究を行っています。"
+    en: "Personal research page of Kenta Yokoe. Research on immersive micromanipulation systems and haptic presentation using wearable devices." 

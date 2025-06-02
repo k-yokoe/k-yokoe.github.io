@@ -1,0 +1,28 @@
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .name {
+                font-size: 2em;
+            }
+            .publication, .conference-item {
+                font-size: 0.9em;
+            }
+            .language-switch {
+                text-align: center; /* Center on small screens */
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .profile-info {
+                text-align: center;
+            }
+            .research-images {
+                flex-direction: column;
+                gap: 20px;
+            }
+        } 
