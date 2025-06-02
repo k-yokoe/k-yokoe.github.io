@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横江 健太 | Kenta Yokoe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px; /* Reduced margin */
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px; /* Adjusted padding */
+        }
+        .name {
+            font-size: 2.5em;
+            font-weight: normal;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .name-en {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .title-degree {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        .affiliation {
+            font-size: 1.1em;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        .language-switch { /* Style for language switch link */
+            text-align: right;
+            margin-bottom: 10px; /* Space below language switch */
+            padding-right: 5px; /* Align with container padding */
+        }
+        .language-switch a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 5px 10px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .language-switch a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .main-photo-container { /* Container for the main photo */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .main-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Slightly rounded corners for the photo */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: normal;
+        }
+        .research-area {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 30px;
+        }
+        .research-item { /* Container for each research topic including image */
+            margin-bottom: 25px;
+        }
+        .research-item img {
+            max-width: 100%; /* Make research images responsive */
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px; /* Space between image and text */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .research-area p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+        .timeline {
+            list-style: none;
+        }
+        .timeline li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        .timeline li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 1.2em;
+        }
+        .year {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .publication, .conference-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 3px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .publication .authors, .conference-item .authors {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .publication .title, .conference-item .title {
+            font-style: italic;
+            margin: 5px 0;
+            color: #34495e;
+        }
+        .publication .venue, .conference-item .venue {
+            color: #7f8c8d;
+        }
+        .publication .doi, .conference-item .doi {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 3px;
+        }
+        .award {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+        }
+        .award .award-name {
+            font-weight: bold;
+            color: #856404;
+        }
+        .award .award-date {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .funding {
+            background-color: #e8f5e8;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .funding .period {
+            font-weight: bold;
+            color: #155724;
+        }
+        .funding .funding-title {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .funding .source {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        .contact-info p, .external-links p {
+            font-size: 1.05em;
+            margin-bottom: 8px;
+        }
+        .contact-info a, .external-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover, .external-links a:hover {
+            text-decoration: underline;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #bdc3c7, transparent);
+            margin: 40px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #bdc3c7;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .name {
+                font-size: 2em;
+            }
+            .publication, .conference-item {
+                font-size: 0.9em;
+            }
+            .language-switch {
+                text-align: center; /* Center on small screens */
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="language-switch">
+                <a href="index_en.html">English</a>
+            </div>
+            <h1 class="name">横江 健太</h1>
+            <div class="name-en">Kenta Yokoe</div>
+            <div class="title-degree">博士（工学）</div>
+            <div class="affiliation">名古屋大学 大学院工学研究科 機械システム工学専攻</div>
+            <div class="affiliation">サイバーロボティクス研究グループ</div>
+            <div class="affiliation">日本学術振興会 特別研究員 (PD)</div>
+        </header>
+
+        <div class="main-photo-container">
+            <img src="https://placehold.co/800x400/E2E8F0/A0AEC0?text=メイン写真+(例:+プロフィール写真)" alt="メイン写真" class="main-photo">
+        </div>
+
+        <section>
+            <h2>研究分野</h2>
+            <div class="research-area">
+                <div class="research-item">
+                    <img src="https://placehold.co/600x300/E2E8F0/A0AEC0?text=研究テーマ1の画像" alt="研究テーマ1の画像">
+                    <p>仮想現実・複合現実技術を基盤として，初学者でも容易に微細操作が行えるシステムを研究しています．</p>
+                </div>
+                <div class="research-item">
+                    <img src="https://placehold.co/600x300/E2E8F0/A0AEC0?text=研究テーマ2の画像" alt="研究テーマ2の画像">
+                    <p>McKibben人工筋と衣服で構成された着衣型デバイスを用いて，没入型環境下における触覚提示手法に関する研究をしています．</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>学歴・職歴</h2>
+            <ul class="timeline">
+                <li><span class="year">2017年4月 - 2021年3月</span> 名古屋大学 工学部 機械・航空宇宙工学科</li>
+                <li><span class="year">2021年4月 - 2023年3月</span> 名古屋大学 大学院工学研究科 マイクロ・ナノ機械理工学専攻 博士前期課程</li>
+                <li><span class="year">2023年4月 - 2025年5月</span> 名古屋大学 大学院工学研究科 マイクロ・ナノ機械理工学専攻 博士後期課程</li>
+                <li><span class="year">2023年4月 - 2025年5月</span> 独立行政法人 日本学術振興会 特別研究員 (DC1)</li>
+                <li><span class="year">2025年6月 - 現在</span> 独立行政法人 日本学術振興会 特別研究員 (PD)</li>
+            </ul>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>研究資金</h2>
+            <div class="funding">
+                <div class="period">2024年4月 - 2026年3月</div>
+                <div class="funding-title">着衣型空圧駆動触覚デバイスを用いたヒトの動作を伝達する遠隔指導システム</div>
+                <div class="source">公益財団法人 油空圧機器技術振興財団 研究助成金</div>
+            </div>
+            <div class="funding">
+                <div class="period">2023年4月 - 2025年3月</div>
+                <div class="funding-title">身体への面状力触覚提示を伴う没入型微細操作システム</div>
+                <div class="source">日本学術振興会 科学研究費助成事業 特別研究員奨励費</div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>学術論文（査読付き）</h2>
+            <div class="publication">
+                <div class="authors">K. Yokoe, Y. Funabora, and T. Aoyama</div>
+                <div class="title">"Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow"</div>
+                <div class="venue">IEEE Robotics and Automation Letters, vol. 10, no. 4, pp. 3254–3261, Feb. 2025</div>
+                <div class="doi">doi: 10.1109/lra.2025.3540579</div>
+            </div>
+            <div class="publication">
+                <div class="authors">Y. Peng, Y. Sakai, Y. Funabora, K. Yokoe, T. Aoyama and S. Doki</div>
+                <div class="title">"Funabot-Sleeve: A Wearable Device Employing McKibben Artificial Muscles for Haptic Sensation in the Forearm"</div>
+                <div class="venue">IEEE Robotics and Automation Letters, vol. 10, no. 2, pp. 1944-1951, Feb. 2025</div>
+                <div class="doi">doi: 10.1109/lra.2025.3528229</div>
+            </div>
+            <div class="publication">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi and Y. Hasegawa</div>
+                <div class="title">"Intuitive Directional Sense Presentation to the Torso Using McKibben-Based Surface Haptic Sensation in Immersive Space"</div>
+                <div class="venue">IEEE Transactions on Haptics, vol. 18, no. 1, pp. 244-254, Jan.-March 2025</div>
+                <div class="doi">doi: 10.1109/toh.2024.3522897</div>
+            </div>
+            <div class="publication">
+                <div class="authors">Y. Peng, Y. Sakai, K. Nakagawa, Y. Funabora, T. Aoyama, K. Yokoe, and S. Doki</div>
+                <div class="title">"Funabot-Suit: A bio-inspired and McKibben muscle-actuated suit for natural kinesthetic perception"</div>
+                <div class="venue">Biomimetic Intelligence and Robotics, vol. 3, no. 4, p. 100127, 2023</div>
+                <div class="doi">doi: 10.1016/j.birob.2023.100127</div>
+            </div>
+            <div class="publication">
+                <div class="authors">T. Aoyama, S.Takeno, K.Yokoe, K.Hano, M.Takeuchi and Y.Hasegawa</div>
+                <div class="title">"Micromanipulation System Capable of Simultaneously Presenting High-Resolution and Large Field-of-View Images in Real-Time"</div>
+                <div class="venue">IEEE Access, vol. 11, pp. 34274-34285, 2023</div>
+                <div class="doi">doi: 10.1109/access.2023.3264785</div>
+            </div>
+            <div class="publication">
+                <div class="authors">K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">"An immersive micromanipulation system using real-time 3D imaging microscope and 3D operation interface for high-speed and accurate micro-manipulation"</div>
+                <div class="venue">ROBOMECH Journal, vol. 9, no. 16, Jun. 2022</div>
+                <div class="doi">doi: 10.1186/s40648-022-00228-6</div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>国際会議</h2>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Wearable Fabric Actuator Inducing Shoulder Movements for Directional Guidance of Hand Movements”</div>
+                <div class="venue">in Proceedings of the 2024 IEEE International Conference on Cyborg and Bionic Systems, Nagoya Japan, Nov. 2024, ThReP4T2.2</div>
+                <div class="doi">doi: 10.1109/cbs61689.2024.10860490</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">T. Ito, T. Aoyama, K. Yokoe, T. Yamamura, M. Hiramatsu, H. Kawashima, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Head-Movement Controlled Colonoscope Interface with HeadMounted Display for Simplified the Pan and Tilt Operation”</div>
+                <div class="venue">in Proceedings of the 35th 2024 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2024, SuA1-1-7</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Elbow Angle Guidance System Based on Surface Haptic Sensations Elicited by Lightweight Wearable Fabric Actuator”</div>
+                <div class="venue">in Proceeding of the 2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Boston MA USA: IEEE, Jul. 2024, pp. 1447–1454</div>
+                <div class="doi">doi: 10.1109/aim55361.2024.10637238</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Shoulder-Wearable Fabric Actuator for Directional Sensations”</div>
+                <div class="venue">in Proceeding of the 2023 International Symposium on Micro-NanoMehatronics and Human Science, Nagoya Japan, Nov. 2023, MP2-2-5</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Mixed-Reality-Based Immersive Micromanipulation System for Teleoperation and Collaborative Operation”</div>
+                <div class="venue">in Proceedings of SICE Annual Conference 2022, Kumamoto Japan, Sep. 2022, pp. 1238–1239</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, Y. Funabora, K. Nakagawa, Y. Sakai, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“Control Method of Fabric Actuator Suit for Gaze Guidance in Immersive Spaces”</div>
+                <div class="venue">in Proceeding of the 2022 International Symposium on Micro-NanoMehatronics and Human Science, Nagoya Japan, 2022, TA2\_1\_5</div>
+                <div class="doi">doi: 10.1109/mhs56725.2022.10092066</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa</div>
+                <div class="title">“High-Speed and High-Accuracy Immersive Micro Manipulation System Using 3D Imaging Microscope and Glove-Type Operation Interfaces”</div>
+                <div class="venue">in Proceedings of the 2021 IEEE International Conference on Advanced Robotics and Its Social Impacts, Jul. 2021, FrPA.9</div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>国内会議</h2>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“肩部と肘部の動作を誘発 する面状触覚提示を用いた没入型環境における手指位置誘導”</div>
+                <div class="venue">第 42 回日本ロボッ ト学会学術講演会, 2024年9月, 1E3–07</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“肩部動作を誘発させる面状力触覚提示による手指の方向誘導”</div>
+                <div class="venue">ロボティクス・メカトロニクス 講演会 2024, 2024年5月, 2P2–Q01</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">伊藤 輝亮, 青山 忠義, 横江 健太, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“HMD を用いた大腸内視鏡のアングル操作インタフェース”</div>
+                <div class="venue">ロボティクス・メカトロニクス 講演会 2024, 2024年5月, 2P2–I01</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“布状アクチュエータを用いた肩部への方向提示”</div>
+                <div class="venue">第 41 回日本ロボット学会学術講演会, 2023年9月, 3I3–01</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“没入空間における体幹誘導のための面状力触覚提示”</div>
+                <div class="venue">第 28 回ロボティクスシンポジア, 2023年3月, pp. 75–77</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 舟洞 佑記, 中川 滉貴, 坂井 佑輔, 竹内 大, and 長谷川 泰久</div>
+                <div class="title">“布状アクチュエータスーツにより生成される身体感覚を用いた没入型環境下における 視線誘導”</div>
+                <div class="venue">第 22 回公益社団法人計測自動制御学会システムインテグレーション部門講演会, 2021年12月, 3A1–04</div>
+            </div>
+            <div class="conference-item">
+                <div class="authors">横江 健太, 青山 忠義, 藤城 俊希, 竹内 大, 長谷川 泰久</div>
+                <div class="title">“実時間 3 次元画像呈示 顕微鏡とグローブ型操作インタフェースを用いた没入型マイクロマニピュレーショ ンシステム”</div>
+                <div class="venue">ロボティクス・メカトロニクス 講演会 2021, 2021年6月, 1P3–J06</div>
+                <div class="doi">doi: 10.1299/jsmermd.2021.1P3-J06</div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>受賞</h2>
+            <div class="award">
+                <div class="award-name">Best Paper Award in MHS</div>
+                <div class="award-date">2023年11月</div>
+            </div>
+            <div class="award">
+                <div class="award-name">日本機械学会ロボティクス・メカトロニクス部門欧文誌表彰</div>
+                <div class="award-date">2023年6月</div>
+            </div>
+            <div class="award">
+                <div class="award-name">SICE 優秀学生賞</div>
+                <div class="award-date">2023年3月</div>
+            </div>
+            <div class="award">
+                <div class="award-name">Best Paper Award in MHS</div>
+                <div class="award-date">2022年11月</div>
+            </div>
+            <div class="award">
+                <div class="award-name">日本機械学会若手優秀講演フェロー賞</div>
+                <div class="award-date">2022年6月</div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="contact-info">
+            <h2>連絡先</h2>
+            <p>〒464-8603 愛知県名古屋市千種区不老町１</p>
+            <p>名古屋大学 大学院工学研究科 機械システム工学専攻 サイバーロボティクス研究グループ</p>
+            <p>Email: yokoe[at]nagoya-u.jp</p>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="external-links">
+            <h2>外部リンク</h2>
+            <p><a href="https://researchmap.jp/kenta_yokoe" target="_blank">ReserachMap</a></p>
+            <p><a href="https://www.linkedin.com/in/kenta-yokoe" target="_blank">LinkedIn</a></p>
+            <p><a href="https://cyr.mae.nagoya-u.ac.jp/" target="_blank">研究グループHP</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Kenta Yokoe. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // フッターの年を動的に設定
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
