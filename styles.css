@@ -303,6 +303,14 @@ h3 {
 
 .publication-content, .conference-content {
     line-height: 1.6;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.publication-content:hover, .conference-content:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .publication-content .authors, .conference-content .authors {
@@ -325,15 +333,6 @@ h3 {
     color: var(--text-light);
     font-size: 0.9em;
     margin-top: 5px;
-}
-
-.publication-content .doi a, .conference-content .doi a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-.publication-content .doi a:hover, .conference-content .doi a:hover {
-    text-decoration: underline;
 }
 
 /* Awards */
