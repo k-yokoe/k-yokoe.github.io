@@ -280,7 +280,8 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.publication:hover, .conference-item:hover, .award:hover {
+/* ホバーエフェクトはリンクがある要素のみに適用 */
+.publication:has(a):hover, .conference-item:has(a):hover {
     box-shadow: var(--shadow);
     transform: translateY(-2px);
 }
@@ -344,10 +345,7 @@ h3 {
     transition: all 0.3s ease;
 }
 
-.award:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
-}
+/* 受賞はリンクがないのでホバーエフェクトを削除 */
 
 .award-name {
     font-weight: 600;
@@ -371,10 +369,7 @@ h3 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.funding:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
-}
+/* 競争的資金もリンクがないのでホバーエフェクトを削除 */
 
 .funding .period {
     font-weight: 600;
