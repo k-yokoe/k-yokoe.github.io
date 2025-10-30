@@ -242,18 +242,13 @@ h3 {
 .timeline li {
     padding: 15px 0;
     border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.3s ease;
 }
 
 .timeline li:last-child {
     border-bottom: none;
 }
 
-.timeline li:hover {
-    background-color: var(--bg-color);
-    margin: 0 -20px;
-    padding: 15px 20px;
-}
+/* 学歴・職歴はリンクがないのでホバーエフェクトを削除 */
 
 .year {
     font-weight: 600;
@@ -536,10 +531,7 @@ footer {
         gap: 20px;
     }
 
-    .timeline li:hover {
-        margin: 0;
-        padding: 15px 0;
-    }
+    /* 学歴・職歴のホバーエフェクトは削除済み */
 
     .external-links-info {
         justify-content: center;
