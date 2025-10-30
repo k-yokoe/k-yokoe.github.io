@@ -210,13 +210,9 @@ h3 {
     padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.research-section:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
+/* 研究内容はリンクがないのでホバーエフェクトを削除 */
 
 .research-images {
     margin-bottom: 20px;
@@ -227,13 +223,9 @@ h3 {
     height: auto;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.research-item img:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
+/* 研究画像もホバーエフェクトを削除 */
 
 .research-area p {
     color: var(--secondary-color);
@@ -421,12 +413,7 @@ h3 {
     border-bottom: none;
 }
 
-.societies-list li:hover {
-    color: var(--primary-color);
-    background-color: var(--bg-color);
-    margin: 0 -20px;
-    padding: 10px 20px;
-}
+/* 所属学会はリンクがないのでホバーエフェクトを削除 */
 
 /* Contact & Links */
 .contact-info p {
