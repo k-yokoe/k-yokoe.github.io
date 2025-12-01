@@ -74,12 +74,6 @@ header {
     object-fit: cover;
     object-position: center 20%;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo img:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-hover);
 }
 
 .profile-info {
