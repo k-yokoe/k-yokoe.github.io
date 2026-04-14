@@ -70,28 +70,113 @@
 
         <section id="research">
             <h2>研究内容</h2>
-            <div class="research-area">
-                <div class="research-container">
-                    <div class="research-section">
-                        <h3>没入型微細操作システム</h3>
-                        <div class="research-images">
-                            <div class="research-item">
-                                <img src="immersive.png" alt="没入型微細操作システムの研究画像">
-                            </div>
-                        </div>
-                        <p>仮想現実・複合現実技術を基盤として，初学者でも容易に微細操作が行えるシステムを研究しています．</p>
+            <div class="research-grid">
+                <div class="research-card" data-research="immersive">
+                    <div class="research-card-img">
+                        <img src="immersive.png" alt="没入型微細操作システム">
                     </div>
-                    
-                    <div class="research-section">
-                        <h3>着衣型デバイスを用いた面状触覚提示</h3>
-                        <div class="research-images">
-                            <div class="research-item">
-                                <img src="tactile.png" alt="触覚提示システムの研究画像">
-                            </div>
-                        </div>
-                        <p>McKibben人工筋と衣服で構成された着衣型デバイスを用いて，没入型環境下における触覚提示手法に関する研究をしています．</p>
-                    </div>
+                    <div class="research-card-title">没入型微細操作システム</div>
+                    <div class="research-card-arrow"></div>
                 </div>
+                <div class="research-card" data-research="posture">
+                    <div class="research-card-img">
+                        <img src="tactile.png" alt="着衣型力触覚デバイスを用いた没入型環境における姿勢誘導">
+                    </div>
+                    <div class="research-card-title">着衣型力触覚デバイスを用いた没入型環境における姿勢誘導</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+                <div class="research-card" data-research="hand">
+                    <div class="research-card-img">
+                        <img src="research_hand.png" alt="着衣型力触覚デバイスを用いた没入型環境における手指位置誘導">
+                    </div>
+                    <div class="research-card-title">着衣型力触覚デバイスを用いた没入型環境における手指位置誘導</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+                <div class="research-card" data-research="colonoscope">
+                    <div class="research-card-img">
+                        <img src="research_colonoscope.png" alt="没入型大腸内視鏡検査システム">
+                    </div>
+                    <div class="research-card-title">没入型大腸内視鏡検査システム</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+            </div>
+
+            <div class="research-detail" id="detail-immersive">
+                <button class="research-detail-close" aria-label="閉じる">&times;</button>
+                <h3>没入型微細操作システム</h3>
+                <p>仮想現実・複合現実技術を基盤として，マイクロ世界に没入することで容易な微細操作を可能とする操作インタフェースの研究開発を行っています．初学者でも簡単にマイクロマニピュレーションを行うことができるシステムを目指しています．</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="video_immersive.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>参考文献</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1186/s40648-022-00228-6" target="_blank">K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi and Y. Hasegawa, "An immersive micro-manipulation system using real-time 3D imaging microscope and 3D operation interface for high-speed and accurate micro-manipulation," <em>ROBOMECH Journal</em>, vol. 9, no. 16, Jun. 2022.</a></li>
+                    <li>K. Yokoe, S. Saito, Y. Funabora, T. Isomura, and T. Aoyama, "McKibben-Based Haptic Sensations for Reducing Cognitive Workload in Immersive Micromanipulation," in Proc. 2026 IEEE 9th International Conference on Soft Robotics (RoboSoft), Apr. 2026, pp. 338-339.</li>
+                    <li>K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Mixed-Reality-Based Immersive Micromanipulation System for Teleoperation and Collaborative Operation," in Proc. SICE Annual Conference 2022, Sep. 2022, pp. 1238–1239.</li>
+                    <li>K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa, "High-Speed and High-Accuracy Immersive Micro Manipulation System Using 3D Imaging Microscope and Glove-Type Operation Interfaces," in Proc. 2021 IEEE International Conference on Advanced Robotics and Its Social Impacts, Jul. 2021.</li>
+                    <li><a href="https://doi.org/10.1299/jsmermd.2021.1P3-J06" target="_blank">横江 健太, 青山 忠義, 藤城 俊希, 竹内 大, 長谷川 泰久, "実時間 3 次元画像呈示顕微鏡とグローブ型操作インタフェースを用いた没入型マイクロマニピュレーションシステム," ロボティクス・メカトロニクス講演会 2021, 2021年6月. <span class="award-badge">若手優秀講演フェロー賞</span></a></li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-posture">
+                <button class="research-detail-close" aria-label="閉じる">&times;</button>
+                <h3>着衣型力触覚デバイスを用いた没入型環境における姿勢誘導</h3>
+                <p>体幹の動作誘導を行う着衣型力触覚デバイスの研究開発を行っています．この着衣型力触覚デバイスにより，没入型空間において視覚情報がなくても方向感覚をユーザーに提供することができます．</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="torso.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>参考文献</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1109/toh.2024.3522897" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi and Y. Hasegawa, "Intuitive Directional Sense Presentation to the Torso Using McKibben-Based Surface Haptic Sensation in Immersive Space," <em>IEEE Transactions on Haptics</em>, vol. 18, no. 1, pp. 244-254, Dec. 2024.</a></li>
+                    <li><a href="https://doi.org/10.1109/cbs61689.2024.10860490" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Wearable Fabric Actuator Inducing Shoulder Movements for Directional Guidance of Hand Movements," in Proc. 2024 IEEE International Conference on Cyborg and Bionic Systems, Nov. 2024.</a></li>
+                    <li><a href="https://doi.org/10.1109/mhs56725.2022.10092066" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, K. Nakagawa, Y. Sakai, M. Takeuchi, and Y. Hasegawa, "Control Method of Fabric Actuator Suit for Gaze Guidance in Immersive Spaces," in Proc. 2022 International Symposium on Micro-NanoMechatronics and Human Science, 2022. <span class="award-badge">Best Paper Award</span></a></li>
+                    <li>横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久, "布状アクチュエータを用いた肩部への方向提示," 第 41 回日本ロボット学会学術講演会, 2023年9月.</li>
+                    <li>横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久, "没入空間における体幹誘導のための面状力触覚提示," 第 28 回ロボティクスシンポジア, 2023年3月.</li>
+                    <li>横江 健太, 青山 忠義, 舟洞 佑記, 中川 滉貴, 坂井 佑輔, 竹内 大, 長谷川 泰久, "布状アクチュエータスーツにより生成される身体感覚を用いた没入型環境下における視線誘導," 第 22 回計測自動制御学会システムインテグレーション部門講演会, 2021年12月.</li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-hand">
+                <button class="research-detail-close" aria-label="閉じる">&times;</button>
+                <h3>着衣型力触覚デバイスを用いた没入型環境における手指位置誘導</h3>
+                <p>手指位置の誘導を行う着衣型力触覚デバイスの研究開発を行っています．この着衣型力触覚デバイスにより，没入型空間において視覚情報がなくても手指の位置に関する情報をユーザーに提供することができます．</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="hand.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>参考文献</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1109/lra.2025.3540579" target="_blank">K. Yokoe, Y. Funabora, and T. Aoyama, "Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow," <em>IEEE Robotics and Automation Letters</em>, vol. 10, no. 4, pp. 3254–3261, Feb. 2025.</a></li>
+                    <li><a href="https://doi.org/10.1109/lra.2025.3540579" target="_blank">K. Yokoe, Y. Funabora, and T. Aoyama, "Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow," in Proc. 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct. 2025. <span class="award-badge">SICE International Young Authors Award</span></a></li>
+                    <li><a href="https://doi.org/10.1109/aim55361.2024.10637238" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Elbow Angle Guidance System Based on Surface Haptic Sensations Elicited by Lightweight Wearable Fabric Actuator," in Proc. 2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Jul. 2024, pp. 1447–1454.</a></li>
+                    <li>K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Shoulder-Wearable Fabric Actuator for Directional Sensations," in Proc. 2023 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2023. <span class="award-badge">Best Paper Award</span></li>
+                    <li>横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久, "肩部と肘部の動作を誘発する面状触覚提示を用いた没入型環境における手指位置誘導," 第 42 回日本ロボット学会学術講演会, 2024年9月.</li>
+                    <li>横江 健太, 青山 忠義, 舟洞 佑記, 竹内 大, 長谷川 泰久, "肩部動作を誘発させる面状力触覚提示による手指の方向誘導," ロボティクス・メカトロニクス講演会 2024, 2024年5月.</li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-colonoscope">
+                <button class="research-detail-close" aria-label="閉じる">&times;</button>
+                <h3>没入型大腸内視鏡検査システム</h3>
+                <p>頭部動作により大腸内視鏡のパン・チルト操作を行い，Head Mounted Display (HMD) に映像を投影する検査システムの研究開発をしています．この支援システムにより，内視鏡操作を簡便化し，術者の負荷を減らすことを目指しています．</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="video_colonoscope.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>参考文献</h4>
+                <ul class="research-refs">
+                    <li><a href="https://www.mein.nagoya-u.ac.jp/mhs/awards25.html" target="_blank">K. Yokoe, T. Ito and T. Aoyama, "Immersive Operation Interface to Simplify Colonoscopy Using Head and Hand Motion," in Proc. 36th 2025 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2025. <span class="award-badge">Best Paper Award</span></a></li>
+                    <li>T. Ito, T. Aoyama, K. Yokoe, T. Yamamura, M. Hiramatsu, H. Kawashima, M. Takeuchi, and Y. Hasegawa, "Head-Movement Controlled Colonoscope Interface with Head Mounted Display for Simplified the Pan and Tilt Operation," in Proc. 35th 2024 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2024.</li>
+                    <li>Kim Taehyeong, 横江 健太, 青山 忠義, "単眼深度推定の基盤モデルを用いた大腸内視鏡の自動パン・チルト制御," 第26回計測自動制御学会システムインテグレーション部門講演会, 2025年12月.</li>
+                    <li>横江 健太, 伊藤 輝亮, 青山 忠義, "大腸内視鏡検査の簡便化に向けた頭部・手指動作による没入型操作インターフェース," 第43回日本ロボット学会学術講演会, 2025年9月.</li>
+                    <li>伊藤 輝亮, 青山 忠義, 横江 健太, 竹内 大, 長谷川 泰久, "HMD を用いた大腸内視鏡のアングル操作インタフェース," ロボティクス・メカトロニクス講演会 2024, 2024年5月.</li>
+                </ul>
             </div>
         </section>
 
@@ -491,13 +576,62 @@
         </section>
     </div>
 
+    <div class="research-overlay-bg" id="research-overlay-bg"></div>
+
     <footer>
         <p>&copy; <span id="currentYear"></span> Kenta Yokoe. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // フッターの年を動的に設定
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.research-card');
+            const overlayBg = document.getElementById('research-overlay-bg');
+
+            function closeOverlay() {
+                document.querySelectorAll('.research-detail.visible').forEach(d => {
+                    d.classList.remove('visible');
+                    const videos = d.querySelectorAll('video');
+                    videos.forEach(v => v.pause());
+                });
+                overlayBg.classList.remove('visible');
+                cards.forEach(c => c.classList.remove('active'));
+                document.body.style.overflow = '';
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const researchId = this.dataset.research;
+                    const detail = document.getElementById('detail-' + researchId);
+                    const wasActive = this.classList.contains('active');
+
+                    closeOverlay();
+
+                    if (!wasActive) {
+                        this.classList.add('active');
+                        overlayBg.classList.add('visible');
+                        detail.classList.add('visible');
+                        document.body.style.overflow = 'hidden';
+                        const videos = detail.querySelectorAll('video');
+                        videos.forEach(v => v.play().catch(() => {}));
+                    }
+                });
+            });
+
+            document.querySelectorAll('.research-detail-close').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeOverlay();
+                });
+            });
+
+            overlayBg.addEventListener('click', closeOverlay);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeOverlay();
+            });
+        });
 
         // セクションナビゲーション機能
         document.addEventListener('DOMContentLoaded', function() {

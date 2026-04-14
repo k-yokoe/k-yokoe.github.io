@@ -72,29 +72,105 @@
 
         <section id="research">
             <h2>Research</h2>
-            <div class="research-area">
-                <div class="research-container">
-                    <div class="research-section">
-                        <h3>Immersive Micromanipulation System</h3>
-                        <div class="research-images">
-                            <div class="research-item">
-                                <img src="immersive.png" alt="Research image of immersive micromanipulation system">
-                            </div>
-                        </div>
-                        <p>Research on systems that enable even beginners to perform micromanipulation tasks easily, based on virtual reality and mixed reality technologies</p>
+            <div class="research-grid">
+                <div class="research-card" data-research="immersive">
+                    <div class="research-card-img">
+                        <img src="immersive.png" alt="Immersive Micromanipulation System">
                     </div>
-                    
-                    <div class="research-section">
-                        <h3>Surface Haptic Sensations Using Wearable Devices</h3>
-                        <div class="research-images">
-                            <div class="research-item">
-                                <img src="tactile.png" alt="Research image of haptic presentation system">
-                            </div>
-                        </div>
-                        <p>Research on tactile feedback in immersive environments using wearable devices composed of McKibben artificial muscles and clothing
-                        </p>
-                    </div>
+                    <div class="research-card-title">Immersive Micromanipulation System</div>
+                    <div class="research-card-arrow"></div>
                 </div>
+                <div class="research-card" data-research="posture">
+                    <div class="research-card-img">
+                        <img src="tactile.png" alt="Postural Guidance in Immersive Environments Using Wearable Haptic Device">
+                    </div>
+                    <div class="research-card-title">Postural Guidance in Immersive Environments Using Wearable Haptic Device</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+                <div class="research-card" data-research="hand">
+                    <div class="research-card-img">
+                        <img src="research_hand.png" alt="Hand Positional Guidance in Immersive Environments Using Wearable Haptic Device">
+                    </div>
+                    <div class="research-card-title">Hand Positional Guidance in Immersive Environments Using Wearable Haptic Device</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+                <div class="research-card" data-research="colonoscope">
+                    <div class="research-card-img">
+                        <img src="research_colonoscope.png" alt="Immersive Colonoscopy System">
+                    </div>
+                    <div class="research-card-title">Immersive Colonoscopy System</div>
+                    <div class="research-card-arrow"></div>
+                </div>
+            </div>
+
+            <div class="research-detail" id="detail-immersive">
+                <button class="research-detail-close" aria-label="Close">&times;</button>
+                <h3>Immersive Micromanipulation System</h3>
+                <p>We are developing operation interfaces that enable easy micromanipulation by immersing users in the micro world using virtual reality and mixed reality technologies. Our goal is to create a system that allows even beginners to perform micromanipulation tasks with ease.</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="video_immersive.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>References</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1186/s40648-022-00228-6" target="_blank">K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi and Y. Hasegawa, "An immersive micro-manipulation system using real-time 3D imaging microscope and 3D operation interface for high-speed and accurate micro-manipulation," <em>ROBOMECH Journal</em>, vol. 9, no. 16, Jun. 2022.</a></li>
+                    <li>K. Yokoe, S. Saito, Y. Funabora, T. Isomura, and T. Aoyama, "McKibben-Based Haptic Sensations for Reducing Cognitive Workload in Immersive Micromanipulation," in Proc. 2026 IEEE 9th International Conference on Soft Robotics (RoboSoft), Apr. 2026, pp. 338-339.</li>
+                    <li>K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Mixed-Reality-Based Immersive Micromanipulation System for Teleoperation and Collaborative Operation," in Proc. SICE Annual Conference 2022, Sep. 2022, pp. 1238–1239.</li>
+                    <li>K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa, "High-Speed and High-Accuracy Immersive Micro Manipulation System Using 3D Imaging Microscope and Glove-Type Operation Interfaces," in Proc. 2021 IEEE International Conference on Advanced Robotics and Its Social Impacts, Jul. 2021.</li>
+                    <li><a href="https://doi.org/10.1299/jsmermd.2021.1P3-J06" target="_blank">K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa, "Immersive Micromanipulation System Using Real-Time 3D Imaging Microscope and Glove-Type Operation Interfaces," ROBOMECH 2021, Jun. 2021. <span class="award-badge">JSME Young Engineers Fellow Award</span></a></li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-posture">
+                <button class="research-detail-close" aria-label="Close">&times;</button>
+                <h3>Postural Guidance in Immersive Environments Using Wearable Haptic Device</h3>
+                <p>We are developing wearable haptic devices for postural guidance of the torso. These devices can provide directional sense to users in immersive spaces even without visual information.</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="torso.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>References</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1109/toh.2024.3522897" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi and Y. Hasegawa, "Intuitive Directional Sense Presentation to the Torso Using McKibben-Based Surface Haptic Sensation in Immersive Space," <em>IEEE Transactions on Haptics</em>, vol. 18, no. 1, pp. 244-254, Dec. 2024.</a></li>
+                    <li><a href="https://doi.org/10.1109/cbs61689.2024.10860490" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Wearable Fabric Actuator Inducing Shoulder Movements for Directional Guidance of Hand Movements," in Proc. 2024 IEEE International Conference on Cyborg and Bionic Systems, Nov. 2024.</a></li>
+                    <li><a href="https://doi.org/10.1109/mhs56725.2022.10092066" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, K. Nakagawa, Y. Sakai, M. Takeuchi, and Y. Hasegawa, "Control Method of Fabric Actuator Suit for Gaze Guidance in Immersive Spaces," in Proc. 2022 International Symposium on Micro-NanoMechatronics and Human Science, 2022. <span class="award-badge">Best Paper Award</span></a></li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-hand">
+                <button class="research-detail-close" aria-label="Close">&times;</button>
+                <h3>Hand Positional Guidance in Immersive Environments Using Wearable Haptic Device</h3>
+                <p>We are developing wearable haptic devices for hand positional guidance. These devices can provide hand position information to users in immersive spaces even without visual information.</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="hand.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>References</h4>
+                <ul class="research-refs">
+                    <li><a href="https://doi.org/10.1109/lra.2025.3540579" target="_blank">K. Yokoe, Y. Funabora, and T. Aoyama, "Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow," <em>IEEE Robotics and Automation Letters</em>, vol. 10, no. 4, pp. 3254–3261, Feb. 2025.</a></li>
+                    <li><a href="https://doi.org/10.1109/lra.2025.3540579" target="_blank">K. Yokoe, Y. Funabora, and T. Aoyama, "Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow," in Proc. 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct. 2025. <span class="award-badge">SICE International Young Authors Award</span></a></li>
+                    <li><a href="https://doi.org/10.1109/aim55361.2024.10637238" target="_blank">K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Elbow Angle Guidance System Based on Surface Haptic Sensations Elicited by Lightweight Wearable Fabric Actuator," in Proc. 2024 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Jul. 2024, pp. 1447–1454.</a></li>
+                    <li>K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa, "Shoulder-Wearable Fabric Actuator for Directional Sensations," in Proc. 2023 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2023. <span class="award-badge">Best Paper Award</span></li>
+                </ul>
+            </div>
+
+            <div class="research-detail" id="detail-colonoscope">
+                <button class="research-detail-close" aria-label="Close">&times;</button>
+                <h3>Immersive Colonoscopy System</h3>
+                <p>We are developing an examination system that uses head movements to control the pan and tilt of a colonoscope, with the video projected onto a Head Mounted Display (HMD). This system aims to simplify endoscope operation and reduce the workload on practitioners.</p>
+                <div class="research-detail-video">
+                    <video autoplay muted playsinline loop>
+                        <source src="video_colonoscope.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h4>References</h4>
+                <ul class="research-refs">
+                    <li><a href="https://www.mein.nagoya-u.ac.jp/mhs/awards25.html" target="_blank">K. Yokoe, T. Ito and T. Aoyama, "Immersive Operation Interface to Simplify Colonoscopy Using Head and Hand Motion," in Proc. 36th 2025 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2025. <span class="award-badge">Best Paper Award</span></a></li>
+                    <li>T. Ito, T. Aoyama, K. Yokoe, T. Yamamura, M. Hiramatsu, H. Kawashima, M. Takeuchi, and Y. Hasegawa, "Head-Movement Controlled Colonoscope Interface with Head Mounted Display for Simplified the Pan and Tilt Operation," in Proc. 35th 2024 International Symposium on Micro-NanoMechatronics and Human Science, Nov. 2024.</li>
+                </ul>
             </div>
         </section>
 
@@ -496,13 +572,62 @@
         </section>
     </div>
 
+    <div class="research-overlay-bg" id="research-overlay-bg"></div>
+
     <footer>
         <p>&copy; <span id="currentYear"></span> Kenta Yokoe. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Set the current year in the footer dynamically
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.research-card');
+            const overlayBg = document.getElementById('research-overlay-bg');
+
+            function closeOverlay() {
+                document.querySelectorAll('.research-detail.visible').forEach(d => {
+                    d.classList.remove('visible');
+                    const videos = d.querySelectorAll('video');
+                    videos.forEach(v => v.pause());
+                });
+                overlayBg.classList.remove('visible');
+                cards.forEach(c => c.classList.remove('active'));
+                document.body.style.overflow = '';
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const researchId = this.dataset.research;
+                    const detail = document.getElementById('detail-' + researchId);
+                    const wasActive = this.classList.contains('active');
+
+                    closeOverlay();
+
+                    if (!wasActive) {
+                        this.classList.add('active');
+                        overlayBg.classList.add('visible');
+                        detail.classList.add('visible');
+                        document.body.style.overflow = 'hidden';
+                        const videos = detail.querySelectorAll('video');
+                        videos.forEach(v => v.play().catch(() => {}));
+                    }
+                });
+            });
+
+            document.querySelectorAll('.research-detail-close').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeOverlay();
+                });
+            });
+
+            overlayBg.addEventListener('click', closeOverlay);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeOverlay();
+            });
+        });
 
         // Section navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
