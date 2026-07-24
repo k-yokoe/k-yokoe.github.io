@@ -29,12 +29,14 @@
                     <a href="#awards" class="nav-item">受賞</a>
                     <a href="#grants" class="nav-item">競争的資金</a>
                     <a href="#memberships" class="nav-item">所属学会</a>
+                    <a href="#committee" class="nav-item">委員歴</a>
                     <a href="#contact" class="nav-item">連絡先</a>
                 </div>
                 <a href="index_en.html" class="nav-item language-nav">English</a>
             </div>
         </nav>
 
+        <main class="main-content">
         <header>
             <div class="header-content">
                 <div class="profile-photo">
@@ -660,6 +662,7 @@
             <p>サイバーロボティクス研究グループ</p>
             <p>Email: yokoe [at] nagoya-u.jp</p>
         </section>
+        </main>
     </div>
 
     <div class="research-overlay-bg" id="research-overlay-bg"></div>
@@ -726,7 +729,7 @@
 
             // 現在のセクションをハイライト
             function highlightCurrentSection() {
-                const scrollPosition = window.scrollY + 100;
+                const scrollPosition = window.scrollY + (window.matchMedia('(min-width: 1024px)').matches ? 80 : 100);
 
                 sections.forEach((section, index) => {
                     const sectionTop = section.offsetTop;

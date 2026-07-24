@@ -36,6 +36,7 @@
             </div>
         </nav>
 
+        <main class="main-content">
         <header>
             <div class="header-content">
                 <div class="profile-photo">
@@ -656,6 +657,7 @@
             <p>Graduate School of Engineering, Nagoya University</p>
             <p>Email: yokoe [at] nagoya-u.jp</p>
         </section>
+        </main>
     </div>
 
     <div class="research-overlay-bg" id="research-overlay-bg"></div>
@@ -722,7 +724,7 @@
 
             // Highlight current section
             function highlightCurrentSection() {
-                const scrollPosition = window.scrollY + 100;
+                const scrollPosition = window.scrollY + (window.matchMedia('(min-width: 1024px)').matches ? 80 : 100);
 
                 sections.forEach((section, index) => {
                     const sectionTop = section.offsetTop;

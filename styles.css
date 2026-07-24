@@ -45,6 +45,10 @@ body:lang(en),
     padding: 40px 20px;
 }
 
+.main-content {
+    min-width: 0;
+}
+
 /* Header Styles */
 header {
     background-color: var(--card-bg);
@@ -629,12 +633,23 @@ footer {
     }
 }
 
+@media (max-width: 1023px) {
+    .nav-item {
+        font-size: 0.8em;
+        padding: 10px 10px;
+    }
+
+    .language-nav {
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 10px 5px;
     }
 
-    /* モバイル版でもナビゲーションバーを表示するが、stickyにしない */
     .section-nav {
         position: static !important;
         margin-bottom: 20px;
@@ -872,5 +887,74 @@ html {
     color: white;
     border-color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+        gap: 28px;
+        max-width: 1280px;
+    }
+
+    .section-nav {
+        position: sticky;
+        top: 24px;
+        width: 168px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 100;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: none;
+        margin: 0;
+        padding: 12px 8px;
+        gap: 8px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-items {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 2px;
+        flex: none;
+    }
+
+    .nav-item {
+        padding: 8px 12px;
+        font-size: 0.82em;
+        white-space: normal;
+        line-height: 1.35;
+    }
+
+    .nav-item:hover {
+        transform: none;
+    }
+
+    .language-nav {
+        margin-left: 0;
+        margin-top: 4px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .language-nav:hover {
+        transform: none;
+    }
+
+    .main-content {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
