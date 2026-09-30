@@ -97,6 +97,12 @@ professional_memberships:
   - name:
       ja: "一般社団法人 日本機械学会"
       en: "The Japan Society of Mechanical Engineers (JSME)"
+  - name:
+      ja: "公益社団法人 計測自動制御学会"
+      en: "The Society of Instrument and Control Engineers (SICE)"
+  - name:
+      ja: "一般社団法人 日本ロボット学会"
+      en: "The Robotics Society of Japan (RSJ)"
   - name: "ACM SIGCHI (Association for Computing Machinery - Computer-Human Interaction)"
 
 # メタデータ
