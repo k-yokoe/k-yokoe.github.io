@@ -551,18 +551,12 @@ h3 {
     line-height: 1.4;
 }
 
-.funding .role {
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-}
-
+.funding .role,
 .funding .amount {
     color: var(--accent-color);
     font-weight: 600;
-    font-size: 0.95em;
-    margin-top: 5px;
+    margin-left: 0.6em;
+    white-space: nowrap;
 }
 
 /* Academic Societies */
