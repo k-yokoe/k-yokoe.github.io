@@ -1,8 +1,8 @@
 # Kenta Yokoe (横江 健太)
 
-> Assistant Professor at the Cyber Robotics Laboratory, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University, Japan. Ph.D. (Engineering), Nagoya University. Research on immersive operation interfaces and haptic feedback that support human operation.
+> Assistant Professor at the Cyber Robotics Laboratory, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University, Japan. Ph.D. (Engineering), Nagoya University. Research combining robotics, haptics, and virtual reality to augment human bodily senses and make human work easier and more precise.
 
-The research develops wearable haptic devices based on McKibben artificial muscles that present surface haptic sensations to the body, and uses them to guide posture and hand position in immersive environments. These technologies are applied to micromanipulation, such as intracytoplasmic sperm injection, and to colonoscopy, aiming to simplify operation and reduce workload.
+Current work develops wearable haptic devices based on McKibben artificial muscles that present surface haptic sensations to the body, and immersive interfaces for operating through microscope and endoscope views. These technologies are applied to micromanipulation, such as intracytoplasmic sperm injection, and to colonoscopy.
 
 ## Profiles
 
