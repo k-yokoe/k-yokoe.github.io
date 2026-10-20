@@ -118,6 +118,14 @@ header {
     flex-wrap: wrap;
 }
 
+.profile-summary {
+    margin: 0 60px;
+    padding: 28px 0 48px;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+    line-height: 1.9;
+}
+
 .external-links-info a {
     color: var(--accent-color);
     text-decoration: none;
@@ -625,6 +633,11 @@ footer {
     .external-links-info {
         justify-content: flex-start;
     }
+
+    .profile-summary {
+        margin: 0 40px;
+        padding: 24px 0 40px;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -763,6 +776,13 @@ footer {
 
     .name-en {
         font-size: 1.1em;
+    }
+
+    .profile-summary {
+        margin: 0 16px;
+        padding: 20px 0 24px;
+        font-size: 0.9em;
+        line-height: 1.8;
     }
 }
 

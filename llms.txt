@@ -1,0 +1,32 @@
+# Kenta Yokoe (横江 健太)
+
+> Assistant Professor at the Cyber Robotics Laboratory, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University, Japan. Ph.D. (Engineering), Nagoya University. Research on immersive operation interfaces and haptic feedback that support human operation.
+
+The research develops wearable haptic devices based on McKibben artificial muscles that present surface haptic sensations to the body, and uses them to guide posture and hand position in immersive environments. These technologies are applied to micromanipulation, such as intracytoplasmic sperm injection, and to colonoscopy, aiming to simplify operation and reduce workload.
+
+## Profiles
+
+- [Personal website (Japanese)](https://k-yokoe.github.io/): research, biography, publications, awards, grants
+- [Personal website (English)](https://k-yokoe.github.io/index_en.html): English version of the same content
+- [researchmap](https://researchmap.jp/kenta_yokoe): full list of papers, presentations, and grants
+- [ORCID](https://orcid.org/0000-0001-6615-2072)
+- [Google Scholar](https://scholar.google.com/citations?user=x1HrbVIAAAAJ)
+- [Cyber Robotics Laboratory](https://cyr.mae.nagoya-u.ac.jp/)
+
+## Research topics
+
+- Immersive micromanipulation systems
+- Postural guidance in immersive environments using wearable haptic devices
+- Hand positional guidance in immersive environments using wearable haptic devices
+- Immersive colonoscopy systems
+
+## Peer-reviewed journal papers
+
+- [Immersive Micromanipulation Integrating Pipette and Injector Operations with McKibben-Based Haptic Sensations for Workload Reduction](https://doi.org/10.1109/ACCESS.2026.3717843) — K. Yokoe, S. Saito, Y. Funabora, T. Isomura, and T. Aoyama. IEEE Access, vol. 14, pp. 116393–116404, Jul. 2026.
+- [Automatic Field-of-View Adjustment for a View-Expansive Microscope via LSTM-Based Gaze and Pipette Motion Interpretation](https://doi.org/10.1109/ACCESS.2025.3624246) — K. Yokoe, T. Hara, and T. Aoyama. IEEE Access, vol. 13, pp. 182915–182923, Oct. 2025.
+- [Intuitive Hand Positional Guidance Using McKibben-Based Surface Tactile Sensations to Shoulder and Elbow](https://doi.org/10.1109/lra.2025.3540579) — K. Yokoe, Y. Funabora, and T. Aoyama. IEEE Robotics and Automation Letters, vol. 10, no. 4, pp. 3254–3261, Apr. 2025.
+- [Funabot-Sleeve: A Wearable Device Employing McKibben Artificial Muscles for Haptic Sensation in the Forearm](https://doi.org/10.1109/lra.2025.3528229) — Y. Peng, Y. Sakai, Y. Funabora, K. Yokoe, T. Aoyama, and S. Doki. IEEE Robotics and Automation Letters, vol. 10, no. 2, pp. 1944–1951, Feb. 2025.
+- [Intuitive Directional Sense Presentation to the Torso Using McKibben-Based Surface Haptic Sensation in Immersive Space](https://doi.org/10.1109/toh.2024.3522897) — K. Yokoe, T. Aoyama, Y. Funabora, M. Takeuchi, and Y. Hasegawa. IEEE Transactions on Haptics, vol. 18, no. 1, pp. 244–254, Jan.–Mar. 2025.
+- [Funabot-Suit: A bio-inspired and McKibben muscle-actuated suit for natural kinesthetic perception](https://doi.org/10.1016/j.birob.2023.100127) — Y. Peng, Y. Sakai, K. Nakagawa, Y. Funabora, T. Aoyama, K. Yokoe, and S. Doki. Biomimetic Intelligence and Robotics, vol. 3, no. 4, p. 100127, Dec. 2023.
+- [Micromanipulation System Capable of Simultaneously Presenting High-Resolution and Large Field-of-View Images in Real-Time](https://doi.org/10.1109/access.2023.3264785) — T. Aoyama, S. Takeno, K. Yokoe, K. Hano, M. Takeuchi, and Y. Hasegawa. IEEE Access, vol. 11, pp. 34274–34285, Apr. 2023.
+- [An immersive micro-manipulation system using real-time 3D imaging microscope and 3D operation interface for high-speed and accurate micro-manipulation](https://doi.org/10.1186/s40648-022-00228-6) — K. Yokoe, T. Aoyama, T. Fujishiro, M. Takeuchi, and Y. Hasegawa. ROBOMECH Journal, vol. 9, Art. no. 16, Jun. 2022. (ROBOMECH Journal Best Paper)
