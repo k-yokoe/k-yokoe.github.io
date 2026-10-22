@@ -11,7 +11,30 @@ Current work develops wearable haptic devices based on McKibben artificial muscl
 - [researchmap](https://researchmap.jp/kenta_yokoe): full list of papers, presentations, and grants
 - [ORCID](https://orcid.org/0000-0001-6615-2072)
 - [Google Scholar](https://scholar.google.com/citations?user=x1HrbVIAAAAJ)
+- [arXiv](https://arxiv.org/search/cs?searchtype=author&query=Yokoe+Kenta): preprints
+- [J-GLOBAL](https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202401018575248545)
+- [LinkedIn](https://www.linkedin.com/in/kenta-yokoe)
 - [Cyber Robotics Laboratory](https://cyr.mae.nagoya-u.ac.jp/)
+
+## Career and education
+
+- Aug. 2025 – present: Assistant Professor, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University
+- Jun. 2025 – Jul. 2025: JSPS Research Fellow (PD)
+- Apr. 2023 – May 2025: JSPS Research Fellow (DC1)
+- Apr. 2023 – May 2025: Doctoral Course, Department of Micro-Nano Mechanical Science and Engineering, Graduate School of Engineering, Nagoya University
+- Apr. 2021 – Mar. 2023: Master's Course, Department of Micro-Nano Mechanical Science and Engineering, Graduate School of Engineering, Nagoya University
+- Apr. 2017 – Mar. 2021: Bachelor's Course, Department of Mechanical and Aerospace Engineering, Nagoya University
+
+## Awards
+
+- SI2025 Outstanding Presentation Award (Feb. 16, 2026)
+- Best Paper Award in MHS 2025 (Nov. 25, 2025)
+- SICE International Young Authors Award in IROS 2025 (Oct. 22, 2025)
+- Best Paper Award in MHS 2023 (Nov. 22, 2023)
+- Certificate of Merit for ROBOMECH Journal Best Paper (Jun. 29, 2023)
+- SICE Outstanding Student Award (Mar. 27, 2023)
+- Best Paper Award in MHS 2022 (Nov. 30, 2022)
+- The Japan Society of Mechanical Engineers Young Engineers Fellow Award (Jun. 2, 2022)
 
 ## Research topics
 
